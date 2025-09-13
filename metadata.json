@@ -1,0 +1,5 @@
+{
+  "name": "Sigma Learning Platform",
+  "description": "A modern, interactive learning platform for students, featuring mathematical exercises, video tutorials, and a comprehensive content management system. Built with React and TypeScript.",
+  "requestFramePermissions": []
+}
