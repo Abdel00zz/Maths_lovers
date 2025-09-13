@@ -193,19 +193,19 @@ const App: React.FC = () => {
 
     return (
         <MathJaxContext config={mathJaxConfig} version={3}>
-            <div className="bg-slate-100 min-h-screen text-slate-800">
+            <div className="bg-slate-100 min-h-screen text-slate-800 flex flex-col">
                 <div className="fixed top-6 right-6 z-30">
                     <ArabicLogo />
                 </div>
 
-                 <button
+                <button
                     onClick={() => setIsHelpModalOpen(true)}
-                    className="fixed bottom-4 left-4 z-30 p-3 rounded-full bg-slate-900/40 text-white backdrop-blur-sm hover:bg-slate-900/60 transition-all duration-300"
+                    className="fixed top-6 left-6 z-30 p-3 rounded-full bg-slate-900/40 text-white backdrop-blur-sm hover:bg-slate-900/60 transition-all duration-300"
                     aria-label="Aide et guide"
                 >
                     <HelpIcon className="w-6 h-6" />
                 </button>
-                 <button
+                <button
                     onClick={handleAdminOpen}
                     className="fixed bottom-4 right-4 z-30 p-3 rounded-full bg-slate-900/40 text-white backdrop-blur-sm hover:bg-slate-900/60 transition-all duration-300"
                     aria-label="Admin settings"
@@ -213,7 +213,7 @@ const App: React.FC = () => {
                     <SettingsIcon className="w-6 h-6" />
                 </button>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-1">
                     <section className="py-12 md:py-16 text-center">
                         {user && (
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight leading-tight min-h-[60px] md:min-h-[75px]">
@@ -237,7 +237,7 @@ const App: React.FC = () => {
                     </main>
                 </div>
                 
-                <footer className="py-6 text-center text-slate-500 text-sm border-t border-slate-200">
+                <footer className="py-6 text-center text-slate-500 text-sm border-t border-slate-200 mt-auto">
                     <p>&copy; 2025 Sigma Learning Platform. Tous droits réservés.</p>
                 </footer>
 

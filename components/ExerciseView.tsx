@@ -121,7 +121,7 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({ exercise, index }) => {
                         {activeTab === 'course' && (
                             <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg">
                                 <MathJax dynamic hideUntilTypeset="first">
-                                    <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: exercise.courseReminder }} />
+                                    <div className="prose prose-lg max-w-none math-content" dangerouslySetInnerHTML={{ __html: exercise.courseReminder }} />
                                 </MathJax>
                             </div>
                         )}
@@ -146,7 +146,7 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({ exercise, index }) => {
                         <MathJax dynamic hideUntilTypeset="first">
                             <div 
                                 ref={statementRef}
-                                className="prose prose-lg max-w-none" 
+                                className="prose prose-lg max-w-none math-content exercise-statement" 
                                 dangerouslySetInnerHTML={{ __html: exercise.statement }} 
                             />
                         </MathJax>

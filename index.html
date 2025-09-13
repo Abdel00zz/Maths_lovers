@@ -87,16 +87,59 @@
 
         /* Inline Math: seamless integration with text */
         .prose mjx-container[display="inline"] {
-            margin: 0 0.1em;
+            margin: 0 0.25em;
             vertical-align: baseline;
             font-size: 1em;
             display: inline;
+            line-height: 1;
         }
 
         /* Remove extra spacing around inline math */
         .prose mjx-container[display="inline"] mjx-math {
             display: inline;
             vertical-align: baseline;
+        }
+
+        /* Fix MathJax character positioning */
+        .prose mjx-c {
+            vertical-align: baseline !important;
+            display: inline !important;
+        }
+
+        /* Ensure proper alignment in list items */
+        .prose ol > li mjx-container[display="inline"] {
+            margin: 0 0.2em;
+            vertical-align: baseline;
+        }
+
+        /* Math content specific styling */
+        .math-content {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .math-content mjx-container[display="inline"] {
+            margin: 0 0.2em;
+            vertical-align: baseline;
+            font-size: inherit;
+        }
+
+        /* Exercise statement specific styling */
+        .exercise-statement p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .exercise-statement mjx-container {
+            font-family: inherit;
+        }
+
+        /* Better text-math integration */
+        .prose p mjx-container[display="inline"],
+        .prose li mjx-container[display="inline"] {
+            margin: 0 0.15em;
+            vertical-align: baseline;
+            display: inline;
         }
 
         /* Block Math: proper spacing */
@@ -133,10 +176,11 @@
         }
         .prose ol > li {
             display: flex;
-            align-items: flex-start; 
+            align-items: baseline; 
             counter-increment: item;
             margin-bottom: 1em;
-            position: relative; 
+            position: relative;
+            line-height: 1.6;
         }
         .prose ol > li::before {
             content: counter(item) ".";
@@ -147,7 +191,8 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             color: #6366f1; /* indigo-500 */
-            line-height: inherit; 
+            line-height: 1.6;
+            align-self: flex-start;
             transition: color 0.2s;
         }
 
